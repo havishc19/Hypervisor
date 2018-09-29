@@ -3,12 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define VIR_DOMAIN_MEMORY_STAT_LAST VIR_DOMAIN_MEMORY_STAT_NR
-#define deficitMultiplier 0.2
-#define surplusMultiplier 0.35
-#define surplusPenalty 0.3
-#define domMemThreshold 350 * 1024 // 350 MB
-#define hostMemThreshold 400 * 1024 // 400 MB
+#define VIR_DOMAIN_MEMORY_STAT_LAST VIR_DOMAIN_MEMORY_STAT_NR 
 #define max(a,b) \
    ({ __typeof__ (a) _a = (a); \
        __typeof__ (b) _b = (b); \
@@ -18,15 +13,6 @@
    ({ __typeof__ (a) _a = (a); \
        __typeof__ (b) _b = (b); \
      _a < _b ? _a : _b; })
-
-
-static const double STARVATION =  0.2; // If unused < 0.2 * actual -> starving
-static const double WASTE = 0.35;  // If unused > 0.35 * actual -> wasting
-static const double PENALTY = 0.3; // Penalty. By which rate we are deflating the unused memory.
-static const double HOST_GENEROSITY = 8.0; // One factor by which memory is released from host
-static const unsigned long MIN_HOST_MEMORY = 400 * 1024; //Amount of memory needed by host to keep from crash.
-static const unsigned long MIN_DOM_MEMORY = 350 * 1024; // Amount of memory needed by domain to keep from crash.
-static const char DBG_PWU = 1;
 
 typedef struct DomainList {
     virDomainPtr *domainArr;
@@ -43,6 +29,12 @@ typedef struct DomainMemObj{
 unsigned long long int convert(unsigned long long int val){
     return val/1024;
 }
+
+#define deficitMultiplier 0.25
+#define surplusMultiplier 0.4
+#define surplusPenalty 0.2
+#define domMemThreshold 350 * 1024 
+#define hostMemThreshold 400 * 1024
 
 int getDomains(virConnectPtr conn, struct DomainList *domainList) {
     virDomainPtr *domainArr;

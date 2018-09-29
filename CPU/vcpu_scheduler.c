@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <float.h>
 
-static const double DIFF_THRESHOLD = 20.0;
+static const double DIFF_THRESHOLD = 15.0;
 
 typedef struct DomainStats {
     virDomainPtr domain;
@@ -15,18 +15,6 @@ typedef struct DomainStats {
 } DomainStats;
 
 
-int getDomains(virConnectPtr conn, virDomainPtr **domainList) {
-    virDomainPtr *domainArr;
-
-    int numberDomains = virConnectListAllDomains(conn, &domainArr, VIR_CONNECT_LIST_DOMAINS_ACTIVE |
-                         VIR_CONNECT_LIST_DOMAINS_RUNNING);
-    if (numberDomains == 0) {
-        printf("No active domains!\n");
-        exit(EXIT_FAILURE);
-    }
-    *domainList = domainArr;
-    return numberDomains;
-}
 
 void initializeDomainStats(int nPCPU, virDomainPtr* domainList, DomainStats* currDomainStats, int nDomains){
     /*struct virVcpuInfo {
@@ -200,6 +188,19 @@ void calculateCpuMetrics(int nDomains, DomainStats *currDomainStats, DomainStats
     }
 }
 
+int getDomains(virConnectPtr conn, virDomainPtr **domainList) {
+    virDomainPtr *domainArr;
+
+    int numberDomains = virConnectListAllDomains(conn, &domainArr, VIR_CONNECT_LIST_DOMAINS_ACTIVE |
+                         VIR_CONNECT_LIST_DOMAINS_RUNNING);
+    if (numberDomains == 0) {
+        printf("No active domains!\n");
+        exit(EXIT_FAILURE);
+    }
+    *domainList = domainArr;
+    return numberDomains;
+}
+
 int main(int argc, char **argv) {
     if (argc != 2) {
         printf(" Error - Usage: ./vcpu_scheduler <time in seconds>\n");
@@ -277,7 +278,6 @@ int main(int argc, char **argv) {
             prevDomainStats = (DomainStats *)calloc(nDomains, sizeof(DomainStats));
         }
         else{
-
             calculateCpuMetrics(nDomains, currDomainStats, prevDomainStats, pcpuUsage, timePeriod);
             pinVcpu(pcpuUsage, nPCPU, currDomainStats, prevDomainStats, nDomains, timePeriod);
         }

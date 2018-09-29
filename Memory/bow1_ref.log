@@ -1,0 +1,80 @@
+Script started on Sat 29 Sep 2018 12:26:13 PM PDT
+]0;havishchennamraj@ubuntu: ~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/Memory[01;32mhavishchennamraj@ubuntu[00m:[01;34m~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/Memory[00m$ ./Memory_coordinator_ref 10
+---------we have 4 active domains--------
+secondtest: actual balloon size--512MB;	available--464MB;	unused--276MB.
+firsttest: actual balloon size--512MB;	available--464MB;	unused--128MB.
+fourthtest: actual balloon size--512MB;	available--464MB;	unused--275MB.
+thirdtest: actual balloon size--512MB;	available--464MB;	unused--275MB.
+Number of starving domains: 0;
+Number of wasteful domains: 3.
+No starving domain. Putting back memory to host.
+Wasteful domain secondtest: Deflating memory 512 MB to 429 MB to host.
+Wasteful domain fourthtest: Deflating memory 512 MB to 429 MB to host.
+Wasteful domain thirdtest: Deflating memory 512 MB to 429 MB to host.
+Finished coordination!
+
+
+
+---------we have 4 active domains--------
+secondtest: actual balloon size--429MB;	available--381MB;	unused--193MB.
+firsttest: actual balloon size--512MB;	available--464MB;	unused--385MB.
+fourthtest: actual balloon size--429MB;	available--381MB;	unused--193MB.
+thirdtest: actual balloon size--429MB;	available--381MB;	unused--193MB.
+Number of starving domains: 0;
+Number of wasteful domains: 4.
+No starving domain. Putting back memory to host.
+Wasteful domain secondtest: Deflating memory 429 MB to 370 MB to host.
+Wasteful domain firsttest: Deflating memory 512 MB to 396 MB to host.
+Wasteful domain fourthtest: Deflating memory 429 MB to 371 MB to host.
+Wasteful domain thirdtest: Deflating memory 429 MB to 371 MB to host.
+Finished coordination!
+
+
+
+---------we have 4 active domains--------
+secondtest: actual balloon size--370MB;	available--323MB;	unused--135MB.
+firsttest: actual balloon size--396MB;	available--348MB;	unused--270MB.
+fourthtest: actual balloon size--371MB;	available--323MB;	unused--135MB.
+thirdtest: actual balloon size--371MB;	available--323MB;	unused--135MB.
+Number of starving domains: 0;
+Number of wasteful domains: 4.
+No starving domain. Putting back memory to host.
+Wasteful domain secondtest: Deflating memory 370 MB to 350 MB to host.
+Wasteful domain firsttest: Deflating memory 396 MB to 350 MB to host.
+Wasteful domain fourthtest: Deflating memory 371 MB to 350 MB to host.
+Wasteful domain thirdtest: Deflating memory 371 MB to 350 MB to host.
+Finished coordination!
+
+
+
+---------we have 4 active domains--------
+secondtest: actual balloon size--350MB;	available--302MB;	unused--114MB.
+firsttest: actual balloon size--350MB;	available--302MB;	unused--224MB.
+fourthtest: actual balloon size--350MB;	available--302MB;	unused--114MB.
+thirdtest: actual balloon size--350MB;	available--302MB;	unused--114MB.
+Number of starving domains: 0;
+Number of wasteful domains: 1.
+No starving domain. Putting back memory to host.
+Wasteful domain firsttest: Deflating memory 350 MB to 350 MB to host.
+Finished coordination!
+
+
+
+---------we have 4 active domains--------
+secondtest: actual balloon size--350MB;	available--302MB;	unused--114MB.
+firsttest: actual balloon size--350MB;	available--302MB;	unused--223MB.
+fourthtest: actual balloon size--350MB;	available--302MB;	unused--114MB.
+thirdtest: actual balloon size--350MB;	available--302MB;	unused--114MB.
+Number of starving domains: 0;
+Number of wasteful domains: 1.
+No starving domain. Putting back memory to host.
+Wasteful domain firsttest: Deflating memory 350 MB to 350 MB to host.
+Finished coordination!
+
+
+
+^C
+]0;havishchennamraj@ubuntu: ~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/Memory[01;32mhavishchennamraj@ubuntu[00m:[01;34m~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/Memory[00m$ c[Kexit
+exit
+
+Script done on Sat 29 Sep 2018 12:27:21 PM PDT

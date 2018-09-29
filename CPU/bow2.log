@@ -1,0 +1,236 @@
+Script started on Sat 29 Sep 2018 11:49:08 AM PDT
+]0;havishchennamraj@ubuntu: ~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/CPU[01;32mhavishchennamraj@ubuntu[00m:[01;34m~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/CPU[00m$ make
+gcc -o ./vcpu_scheduler ./vcpu_scheduler.c -Wall -I. -lvirt
+]0;havishchennamraj@ubuntu: ~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/CPU[01;32mhavishchennamraj@ubuntu[00m:[01;34m~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/CPU[00m$ ./vcpu_schedulerp[K 10[K[K5
+------- General Stats --------
+* n_pcpus: 4 
+* Number of domains: 8 
+Iteration 1 done!!
+=================================================================================
+
+
+------- General Stats --------
+* n_pcpus: 4 
+* Number of domains: 8 
+----- CPU Metrics --- 
+	-> Domain: seventhtest, vCPU: 0, pCPU: 0, Usage: 25.000000 
+	-> Domain: secondtest, vCPU: 0, pCPU: 3, Usage: 25.400000 
+	-> Domain: sixthtest, vCPU: 0, pCPU: 3, Usage: 24.200000 
+	-> Domain: fifthtest, vCPU: 0, pCPU: 0, Usage: 25.000000 
+	-> Domain: firsttest, vCPU: 0, pCPU: 0, Usage: 24.800000 
+	-> Domain: fourthtest, vCPU: 0, pCPU: 3, Usage: 25.400000 
+	-> Domain: eighttest, vCPU: 0, pCPU: 3, Usage: 25.400000 
+	-> Domain: thirdtest, vCPU: 0, pCPU: 0, Usage: 25.000000 
+---------- pCPU Usage --------------- 
+	->pCPU: 0, Usage: 99.800000
+	->pCPU: 1, Usage: 0.000000
+	->pCPU: 2, Usage: 0.000000
+	->pCPU: 3, Usage: 100.400000
+Lightest pCPU: 1, Heaviest pCPU: 3
+----------- Pinning vCPU Transactions ----------------------
+	->Pinning vCPU 0 in Domain sixthtest to pCPU 1 
+	->Pin Result: Success
+Iteration 2 done!!
+=================================================================================
+
+
+------- General Stats --------
+* n_pcpus: 4 
+* Number of domains: 8 
+----- CPU Metrics --- 
+	-> Domain: seventhtest, vCPU: 0, pCPU: 0, Usage: 25.000000 
+	-> Domain: secondtest, vCPU: 0, pCPU: 3, Usage: 33.600000 
+	-> Domain: sixthtest, vCPU: 0, pCPU: 1, Usage: 39.600000 
+	-> Domain: fifthtest, vCPU: 0, pCPU: 0, Usage: 25.000000 
+	-> Domain: firsttest, vCPU: 0, pCPU: 0, Usage: 25.000000 
+	-> Domain: fourthtest, vCPU: 0, pCPU: 3, Usage: 32.400000 
+	-> Domain: eighttest, vCPU: 0, pCPU: 3, Usage: 33.400000 
+	-> Domain: thirdtest, vCPU: 0, pCPU: 0, Usage: 25.000000 
+---------- pCPU Usage --------------- 
+	->pCPU: 0, Usage: 100.000000
+	->pCPU: 1, Usage: 39.600000
+	->pCPU: 2, Usage: 0.000000
+	->pCPU: 3, Usage: 99.400000
+Lightest pCPU: 2, Heaviest pCPU: 0
+----------- Pinning vCPU Transactions ----------------------
+	->Pinning vCPU 0 in Domain seventhtest to pCPU 2 
+	->Pin Result: Success
+Iteration 3 done!!
+=================================================================================
+
+
+------- General Stats --------
+* n_pcpus: 4 
+* Number of domains: 8 
+----- CPU Metrics --- 
+	-> Domain: seventhtest, vCPU: 0, pCPU: 2, Usage: 39.800000 
+	-> Domain: secondtest, vCPU: 0, pCPU: 3, Usage: 33.400000 
+	-> Domain: sixthtest, vCPU: 0, pCPU: 1, Usage: 40.200000 
+	-> Domain: fifthtest, vCPU: 0, pCPU: 0, Usage: 33.400000 
+	-> Domain: firsttest, vCPU: 0, pCPU: 0, Usage: 34.200000 
+	-> Domain: fourthtest, vCPU: 0, pCPU: 3, Usage: 33.400000 
+	-> Domain: eighttest, vCPU: 0, pCPU: 3, Usage: 33.600000 
+	-> Domain: thirdtest, vCPU: 0, pCPU: 0, Usage: 32.600000 
+---------- pCPU Usage --------------- 
+	->pCPU: 0, Usage: 100.200000
+	->pCPU: 1, Usage: 40.200000
+	->pCPU: 2, Usage: 39.800000
+	->pCPU: 3, Usage: 100.400000
+Lightest pCPU: 2, Heaviest pCPU: 3
+----------- Pinning vCPU Transactions ----------------------
+	->Pinning vCPU 0 in Domain secondtest to pCPU 2 
+	->Pin Result: Success
+Iteration 4 done!!
+=================================================================================
+
+
+------- General Stats --------
+* n_pcpus: 4 
+* Number of domains: 8 
+----- CPU Metrics --- 
+	-> Domain: seventhtest, vCPU: 0, pCPU: 2, Usage: 41.000000 
+	-> Domain: secondtest, vCPU: 0, pCPU: 2, Usage: 40.800000 
+	-> Domain: sixthtest, vCPU: 0, pCPU: 1, Usage: 38.800000 
+	-> Domain: fifthtest, vCPU: 0, pCPU: 0, Usage: 33.800000 
+	-> Domain: firsttest, vCPU: 0, pCPU: 0, Usage: 32.400000 
+	-> Domain: fourthtest, vCPU: 0, pCPU: 3, Usage: 41.200000 
+	-> Domain: eighttest, vCPU: 0, pCPU: 3, Usage: 41.200000 
+	-> Domain: thirdtest, vCPU: 0, pCPU: 0, Usage: 34.000000 
+---------- pCPU Usage --------------- 
+	->pCPU: 0, Usage: 100.200000
+	->pCPU: 1, Usage: 38.800000
+	->pCPU: 2, Usage: 81.800000
+	->pCPU: 3, Usage: 82.400000
+Lightest pCPU: 1, Heaviest pCPU: 0
+----------- Pinning vCPU Transactions ----------------------
+	->Pinning vCPU 0 in Domain firsttest to pCPU 1 
+	->Pin Result: Success
+Iteration 5 done!!
+=================================================================================
+
+
+------- General Stats --------
+* n_pcpus: 4 
+* Number of domains: 8 
+----- CPU Metrics --- 
+	-> Domain: seventhtest, vCPU: 0, pCPU: 2, Usage: 40.400000 
+	-> Domain: secondtest, vCPU: 0, pCPU: 2, Usage: 41.000000 
+	-> Domain: sixthtest, vCPU: 0, pCPU: 1, Usage: 40.600000 
+	-> Domain: fifthtest, vCPU: 0, pCPU: 0, Usage: 41.000000 
+	-> Domain: firsttest, vCPU: 0, pCPU: 1, Usage: 40.800000 
+	-> Domain: fourthtest, vCPU: 0, pCPU: 3, Usage: 41.000000 
+	-> Domain: eighttest, vCPU: 0, pCPU: 3, Usage: 41.200000 
+	-> Domain: thirdtest, vCPU: 0, pCPU: 0, Usage: 40.800000 
+---------- pCPU Usage --------------- 
+	->pCPU: 0, Usage: 81.800000
+	->pCPU: 1, Usage: 81.400000
+	->pCPU: 2, Usage: 81.400000
+	->pCPU: 3, Usage: 82.200000
+Lightest pCPU: 1, Heaviest pCPU: 3
+----------- Pinning vCPU Transactions ----------------------
+	->Load distributed equally, no need to balance load 
+Iteration 6 done!!
+=================================================================================
+
+
+------- General Stats --------
+* n_pcpus: 4 
+* Number of domains: 8 
+----- CPU Metrics --- 
+	-> Domain: seventhtest, vCPU: 0, pCPU: 2, Usage: 41.400000 
+	-> Domain: secondtest, vCPU: 0, pCPU: 2, Usage: 41.600000 
+	-> Domain: sixthtest, vCPU: 0, pCPU: 1, Usage: 41.000000 
+	-> Domain: fifthtest, vCPU: 0, pCPU: 0, Usage: 40.800000 
+	-> Domain: firsttest, vCPU: 0, pCPU: 1, Usage: 40.800000 
+	-> Domain: fourthtest, vCPU: 0, pCPU: 3, Usage: 41.600000 
+	-> Domain: eighttest, vCPU: 0, pCPU: 3, Usage: 41.000000 
+	-> Domain: thirdtest, vCPU: 0, pCPU: 0, Usage: 41.200000 
+---------- pCPU Usage --------------- 
+	->pCPU: 0, Usage: 82.000000
+	->pCPU: 1, Usage: 81.800000
+	->pCPU: 2, Usage: 83.000000
+	->pCPU: 3, Usage: 82.600000
+Lightest pCPU: 1, Heaviest pCPU: 2
+----------- Pinning vCPU Transactions ----------------------
+	->Load distributed equally, no need to balance load 
+Iteration 7 done!!
+=================================================================================
+
+
+------- General Stats --------
+* n_pcpus: 4 
+* Number of domains: 8 
+----- CPU Metrics --- 
+	-> Domain: seventhtest, vCPU: 0, pCPU: 2, Usage: 38.800000 
+	-> Domain: secondtest, vCPU: 0, pCPU: 2, Usage: 43.400000 
+	-> Domain: sixthtest, vCPU: 0, pCPU: 1, Usage: 39.800000 
+	-> Domain: fifthtest, vCPU: 0, pCPU: 0, Usage: 41.200000 
+	-> Domain: firsttest, vCPU: 0, pCPU: 1, Usage: 39.800000 
+	-> Domain: fourthtest, vCPU: 0, pCPU: 3, Usage: 40.800000 
+	-> Domain: eighttest, vCPU: 0, pCPU: 3, Usage: 40.800000 
+	-> Domain: thirdtest, vCPU: 0, pCPU: 0, Usage: 41.000000 
+---------- pCPU Usage --------------- 
+	->pCPU: 0, Usage: 82.200000
+	->pCPU: 1, Usage: 79.600000
+	->pCPU: 2, Usage: 82.200000
+	->pCPU: 3, Usage: 81.600000
+Lightest pCPU: 1, Heaviest pCPU: 0
+----------- Pinning vCPU Transactions ----------------------
+	->Load distributed equally, no need to balance load 
+Iteration 8 done!!
+=================================================================================
+
+
+------- General Stats --------
+* n_pcpus: 4 
+* Number of domains: 8 
+----- CPU Metrics --- 
+	-> Domain: seventhtest, vCPU: 0, pCPU: 2, Usage: 41.000000 
+	-> Domain: secondtest, vCPU: 0, pCPU: 2, Usage: 41.200000 
+	-> Domain: sixthtest, vCPU: 0, pCPU: 1, Usage: 39.600000 
+	-> Domain: fifthtest, vCPU: 0, pCPU: 0, Usage: 41.400000 
+	-> Domain: firsttest, vCPU: 0, pCPU: 1, Usage: 40.400000 
+	-> Domain: fourthtest, vCPU: 0, pCPU: 3, Usage: 40.800000 
+	-> Domain: eighttest, vCPU: 0, pCPU: 3, Usage: 40.800000 
+	-> Domain: thirdtest, vCPU: 0, pCPU: 0, Usage: 41.400000 
+---------- pCPU Usage --------------- 
+	->pCPU: 0, Usage: 82.800000
+	->pCPU: 1, Usage: 80.000000
+	->pCPU: 2, Usage: 82.200000
+	->pCPU: 3, Usage: 81.600000
+Lightest pCPU: 1, Heaviest pCPU: 0
+----------- Pinning vCPU Transactions ----------------------
+	->Load distributed equally, no need to balance load 
+Iteration 9 done!!
+=================================================================================
+
+
+------- General Stats --------
+* n_pcpus: 4 
+* Number of domains: 8 
+----- CPU Metrics --- 
+	-> Domain: seventhtest, vCPU: 0, pCPU: 2, Usage: 40.600000 
+	-> Domain: secondtest, vCPU: 0, pCPU: 2, Usage: 40.600000 
+	-> Domain: sixthtest, vCPU: 0, pCPU: 1, Usage: 39.600000 
+	-> Domain: fifthtest, vCPU: 0, pCPU: 0, Usage: 41.000000 
+	-> Domain: firsttest, vCPU: 0, pCPU: 1, Usage: 40.000000 
+	-> Domain: fourthtest, vCPU: 0, pCPU: 3, Usage: 40.800000 
+	-> Domain: eighttest, vCPU: 0, pCPU: 3, Usage: 40.800000 
+	-> Domain: thirdtest, vCPU: 0, pCPU: 0, Usage: 41.600000 
+---------- pCPU Usage --------------- 
+	->pCPU: 0, Usage: 82.600000
+	->pCPU: 1, Usage: 79.600000
+	->pCPU: 2, Usage: 81.200000
+	->pCPU: 3, Usage: 81.600000
+Lightest pCPU: 1, Heaviest pCPU: 0
+----------- Pinning vCPU Transactions ----------------------
+	->Load distributed equally, no need to balance load 
+Iteration 10 done!!
+=================================================================================
+
+
+^C
+]0;havishchennamraj@ubuntu: ~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/CPU[01;32mhavishchennamraj@ubuntu[00m:[01;34m~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/CPU[00m$ exit
+exit
+
+Script done on Sat 29 Sep 2018 11:50:02 AM PDT

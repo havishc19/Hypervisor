@@ -1,0 +1,1558 @@
+Script started on Sat 29 Sep 2018 01:05:00 PM PDT
+]0;havishchennamraj@ubuntu: ~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/Memory[01;32mhavishchennamraj@ubuntu[00m:[01;34m~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/Memory[00m$ make
+gcc -o ./Memory_coordinator ./Memory_coordinator.c -Wall -I. -lvirt
+]0;havishchennamraj@ubuntu: ~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/Memory[01;32mhavishchennamraj@ubuntu[00m:[01;34m~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/Memory[00m$ (reverse-i-search)`': [K.': ./Memory_coordinator 1[1@/[C[C[C]0;havishchennamraj@ubuntu: ~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/Memory[01;32mhavishchennamraj@ubuntu[00m:[01;34m~/AOS/Vcpu-Scheduler-and-Memory-Coordinator/Memory[00m$ ./Memory_coordinator 1[Cmake[K./Memory_coordinator 1
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 512 MB, Total Unsed Memory: 232 MB
+Domain: firsttest, Total Domain Memory: 512 MB, Total Unsed Memory: 240 MB
+Domain: fourthtest, Total Domain Memory: 512 MB, Total Unsed Memory: 221 MB
+Domain: thirdtest, Total Domain Memory: 512 MB, Total Unsed Memory: 230 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: secondtest 	 Total Memory: 512 	 Available Memory: 232
+Domain: firsttest 	 Total Memory: 512 	 Available Memory: 240
+Domain: fourthtest 	 Total Memory: 512 	 Available Memory: 221
+Domain: thirdtest 	 Total Memory: 512 	 Available Memory: 230
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: secondtest, Deflating memory from 512 MB to 442 MB.
+	-> Domain: firsttest, Deflating memory from 512 MB to 439 MB.
+	-> Domain: fourthtest, Deflating memory from 512 MB to 445 MB.
+	-> Domain: thirdtest, Deflating memory from 512 MB to 442 MB.
+* Total Memory Freed: 277 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 442 MB, Total Unsed Memory: 154 MB
+Domain: firsttest, Total Domain Memory: 439 MB, Total Unsed Memory: 198 MB
+Domain: fourthtest, Total Domain Memory: 445 MB, Total Unsed Memory: 130 MB
+Domain: thirdtest, Total Domain Memory: 442 MB, Total Unsed Memory: 139 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: firsttest 	 Total Memory: 439 	 Available Memory: 198
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: firsttest, Deflating memory from 439 MB to 380 MB.
+* Total Memory Freed: 59 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 442 MB, Total Unsed Memory: 116 MB
+Domain: firsttest, Total Domain Memory: 380 MB, Total Unsed Memory: 99 MB
+Domain: fourthtest, Total Domain Memory: 445 MB, Total Unsed Memory: 103 MB
+Domain: thirdtest, Total Domain Memory: 442 MB, Total Unsed Memory: 112 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 442 MB, Total Unsed Memory: 95 MB
+Domain: firsttest, Total Domain Memory: 380 MB, Total Unsed Memory: 73 MB
+Domain: fourthtest, Total Domain Memory: 445 MB, Total Unsed Memory: 80 MB
+Domain: thirdtest, Total Domain Memory: 442 MB, Total Unsed Memory: 103 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 380 	 Available Memory: 73
+Domain: fourthtest 	 Total Memory: 445 	 Available Memory: 80
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 10 MB
+	-> Host was able to cough up 83 MB
+-Total Memory Freed: 83 MB
+	-> Starving domain firsttest: Inflating Memory from 380 MB to 422 MB.
+	-> Starving domain fourthtest: Inflating Memory from 445 MB to 867 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 442 MB, Total Unsed Memory: 69 MB
+Domain: firsttest, Total Domain Memory: 422 MB, Total Unsed Memory: 92 MB
+Domain: fourthtest, Total Domain Memory: 867 MB, Total Unsed Memory: 418 MB
+Domain: thirdtest, Total Domain Memory: 442 MB, Total Unsed Memory: 77 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 442 	 Available Memory: 69
+Domain: thirdtest 	 Total Memory: 442 	 Available Memory: 77
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 867 	 Available Memory: 418
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 29 MB
+	-> Domain: fourthtest, Deflating memory from 867 MB to 742 MB.
+-Total Memory Freed: 125 MB
+	-> Starving domain secondtest: Inflating Memory from 442 MB to 505 MB.
+	-> Starving domain thirdtest: Inflating Memory from 442 MB to 948 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 505 MB, Total Unsed Memory: 134 MB
+Domain: firsttest, Total Domain Memory: 422 MB, Total Unsed Memory: 73 MB
+Domain: fourthtest, Total Domain Memory: 742 MB, Total Unsed Memory: 348 MB
+Domain: thirdtest, Total Domain Memory: 782 MB, Total Unsed Memory: 254 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 422 	 Available Memory: 73
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 742 	 Available Memory: 348
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 11 MB
+	-> Domain: fourthtest, Deflating memory from 742 MB to 637 MB.
+-Total Memory Freed: 104 MB
+	-> Starving domain firsttest: Inflating Memory from 422 MB to 526 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 505 MB, Total Unsed Memory: 112 MB
+Domain: firsttest, Total Domain Memory: 526 MB, Total Unsed Memory: 161 MB
+Domain: fourthtest, Total Domain Memory: 637 MB, Total Unsed Memory: 228 MB
+Domain: thirdtest, Total Domain Memory: 948 MB, Total Unsed Memory: 556 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 637 	 Available Memory: 228
+Domain: thirdtest 	 Total Memory: 948 	 Available Memory: 556
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: fourthtest, Deflating memory from 637 MB to 568 MB.
+	-> Domain: thirdtest, Deflating memory from 948 MB to 781 MB.
+* Total Memory Freed: 235 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 505 MB, Total Unsed Memory: 90 MB
+Domain: firsttest, Total Domain Memory: 526 MB, Total Unsed Memory: 141 MB
+Domain: fourthtest, Total Domain Memory: 568 MB, Total Unsed Memory: 142 MB
+Domain: thirdtest, Total Domain Memory: 781 MB, Total Unsed Memory: 377 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 505 	 Available Memory: 90
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 781 	 Available Memory: 377
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 10 MB
+	-> Domain: thirdtest, Deflating memory from 781 MB to 667 MB.
+-Total Memory Freed: 113 MB
+	-> Starving domain secondtest: Inflating Memory from 505 MB to 618 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 618 MB, Total Unsed Memory: 97 MB
+Domain: firsttest, Total Domain Memory: 526 MB, Total Unsed Memory: 120 MB
+Domain: fourthtest, Total Domain Memory: 568 MB, Total Unsed Memory: 123 MB
+Domain: thirdtest, Total Domain Memory: 667 MB, Total Unsed Memory: 251 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 618 	 Available Memory: 97
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 667 	 Available Memory: 251
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 25 MB
+	-> Domain: thirdtest, Deflating memory from 667 MB to 592 MB.
+-Total Memory Freed: 75 MB
+	-> Starving domain secondtest: Inflating Memory from 618 MB to 693 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 693 MB, Total Unsed Memory: 175 MB
+Domain: firsttest, Total Domain Memory: 526 MB, Total Unsed Memory: 100 MB
+Domain: fourthtest, Total Domain Memory: 568 MB, Total Unsed Memory: 101 MB
+Domain: thirdtest, Total Domain Memory: 592 MB, Total Unsed Memory: 161 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 526 	 Available Memory: 100
+Domain: fourthtest 	 Total Memory: 568 	 Available Memory: 101
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 16 MB
+	-> Host was able to cough up 135 MB
+-Total Memory Freed: 135 MB
+	-> Starving domain firsttest: Inflating Memory from 526 MB to 594 MB.
+	-> Starving domain fourthtest: Inflating Memory from 568 MB to 1163 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 693 MB, Total Unsed Memory: 225 MB
+Domain: firsttest, Total Domain Memory: 594 MB, Total Unsed Memory: 150 MB
+Domain: fourthtest, Total Domain Memory: 1067 MB, Total Unsed Memory: 367 MB
+Domain: thirdtest, Total Domain Memory: 592 MB, Total Unsed Memory: 145 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 693 MB, Total Unsed Memory: 208 MB
+Domain: firsttest, Total Domain Memory: 594 MB, Total Unsed Memory: 129 MB
+Domain: fourthtest, Total Domain Memory: 1163 MB, Total Unsed Memory: 676 MB
+Domain: thirdtest, Total Domain Memory: 592 MB, Total Unsed Memory: 127 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 1163 	 Available Memory: 676
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: fourthtest, Deflating memory from 1163 MB to 960 MB.
+* Total Memory Freed: 203 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 693 MB, Total Unsed Memory: 190 MB
+Domain: firsttest, Total Domain Memory: 594 MB, Total Unsed Memory: 113 MB
+Domain: fourthtest, Total Domain Memory: 960 MB, Total Unsed Memory: 500 MB
+Domain: thirdtest, Total Domain Memory: 592 MB, Total Unsed Memory: 110 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 594 	 Available Memory: 113
+Domain: thirdtest 	 Total Memory: 592 	 Available Memory: 110
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 960 	 Available Memory: 500
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 13 MB
+	-> Domain: fourthtest, Deflating memory from 960 MB to 810 MB.
+-Total Memory Freed: 150 MB
+	-> Starving domain firsttest: Inflating Memory from 594 MB to 669 MB.
+	-> Starving domain thirdtest: Inflating Memory from 592 MB to 1262 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 693 MB, Total Unsed Memory: 173 MB
+Domain: firsttest, Total Domain Memory: 669 MB, Total Unsed Memory: 171 MB
+Domain: fourthtest, Total Domain Memory: 810 MB, Total Unsed Memory: 338 MB
+Domain: thirdtest, Total Domain Memory: 1009 MB, Total Unsed Memory: 411 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 810 	 Available Memory: 338
+Domain: thirdtest 	 Total Memory: 1009 	 Available Memory: 411
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: fourthtest, Deflating memory from 810 MB to 708 MB.
+	-> Domain: thirdtest, Deflating memory from 1009 MB to 885 MB.
+* Total Memory Freed: 224 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 693 MB, Total Unsed Memory: 156 MB
+Domain: firsttest, Total Domain Memory: 669 MB, Total Unsed Memory: 155 MB
+Domain: fourthtest, Total Domain Memory: 708 MB, Total Unsed Memory: 209 MB
+Domain: thirdtest, Total Domain Memory: 885 MB, Total Unsed Memory: 388 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 885 	 Available Memory: 388
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: thirdtest, Deflating memory from 885 MB to 769 MB.
+* Total Memory Freed: 116 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 693 MB, Total Unsed Memory: 141 MB
+Domain: firsttest, Total Domain Memory: 669 MB, Total Unsed Memory: 139 MB
+Domain: fourthtest, Total Domain Memory: 708 MB, Total Unsed Memory: 168 MB
+Domain: thirdtest, Total Domain Memory: 769 MB, Total Unsed Memory: 259 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 693 MB, Total Unsed Memory: 105 MB
+Domain: firsttest, Total Domain Memory: 669 MB, Total Unsed Memory: 120 MB
+Domain: fourthtest, Total Domain Memory: 708 MB, Total Unsed Memory: 150 MB
+Domain: thirdtest, Total Domain Memory: 769 MB, Total Unsed Memory: 239 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 693 	 Available Memory: 105
+Domain: firsttest 	 Total Memory: 669 	 Available Memory: 120
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 46 MB
+	-> Host was able to cough up 374 MB
+-Total Memory Freed: 374 MB
+	-> Starving domain secondtest: Inflating Memory from 693 MB to 881 MB.
+	-> Starving domain firsttest: Inflating Memory from 669 MB to 1550 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 881 MB, Total Unsed Memory: 280 MB
+Domain: firsttest, Total Domain Memory: 1083 MB, Total Unsed Memory: 440 MB
+Domain: fourthtest, Total Domain Memory: 708 MB, Total Unsed Memory: 129 MB
+Domain: thirdtest, Total Domain Memory: 769 MB, Total Unsed Memory: 219 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: fourthtest 	 Total Memory: 708 	 Available Memory: 129
+Memory Surplus Domains:
+Domain: firsttest 	 Total Memory: 1083 	 Available Memory: 440
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 12 MB
+	-> Domain: firsttest, Deflating memory from 1083 MB to 951 MB.
+-Total Memory Freed: 132 MB
+	-> Starving domain fourthtest: Inflating Memory from 708 MB to 841 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 881 MB, Total Unsed Memory: 259 MB
+Domain: firsttest, Total Domain Memory: 951 MB, Total Unsed Memory: 388 MB
+Domain: fourthtest, Total Domain Memory: 841 MB, Total Unsed Memory: 244 MB
+Domain: thirdtest, Total Domain Memory: 769 MB, Total Unsed Memory: 200 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: firsttest 	 Total Memory: 951 	 Available Memory: 388
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: firsttest, Deflating memory from 951 MB to 835 MB.
+* Total Memory Freed: 116 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 881 MB, Total Unsed Memory: 237 MB
+Domain: firsttest, Total Domain Memory: 835 MB, Total Unsed Memory: 261 MB
+Domain: fourthtest, Total Domain Memory: 841 MB, Total Unsed Memory: 223 MB
+Domain: thirdtest, Total Domain Memory: 769 MB, Total Unsed Memory: 182 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 881 MB, Total Unsed Memory: 212 MB
+Domain: firsttest, Total Domain Memory: 835 MB, Total Unsed Memory: 240 MB
+Domain: fourthtest, Total Domain Memory: 841 MB, Total Unsed Memory: 201 MB
+Domain: thirdtest, Total Domain Memory: 769 MB, Total Unsed Memory: 160 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 881 MB, Total Unsed Memory: 204 MB
+Domain: firsttest, Total Domain Memory: 835 MB, Total Unsed Memory: 230 MB
+Domain: fourthtest, Total Domain Memory: 841 MB, Total Unsed Memory: 179 MB
+Domain: thirdtest, Total Domain Memory: 769 MB, Total Unsed Memory: 148 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: thirdtest 	 Total Memory: 769 	 Available Memory: 148
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 5 MB
+	-> Host was able to cough up 41 MB
+-Total Memory Freed: 41 MB
+	-> Starving domain thirdtest: Inflating Memory from 769 MB to 810 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 881 MB, Total Unsed Memory: 187 MB
+Domain: firsttest, Total Domain Memory: 835 MB, Total Unsed Memory: 212 MB
+Domain: fourthtest, Total Domain Memory: 841 MB, Total Unsed Memory: 160 MB
+Domain: thirdtest, Total Domain Memory: 810 MB, Total Unsed Memory: 174 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: fourthtest 	 Total Memory: 841 	 Available Memory: 160
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 7 MB
+	-> Host was able to cough up 58 MB
+-Total Memory Freed: 58 MB
+	-> Starving domain fourthtest: Inflating Memory from 841 MB to 899 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 881 MB, Total Unsed Memory: 168 MB
+Domain: firsttest, Total Domain Memory: 835 MB, Total Unsed Memory: 193 MB
+Domain: fourthtest, Total Domain Memory: 899 MB, Total Unsed Memory: 201 MB
+Domain: thirdtest, Total Domain Memory: 810 MB, Total Unsed Memory: 153 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 881 	 Available Memory: 168
+Domain: thirdtest 	 Total Memory: 810 	 Available Memory: 153
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 17 MB
+	-> Host was able to cough up 138 MB
+-Total Memory Freed: 138 MB
+	-> Starving domain secondtest: Inflating Memory from 881 MB to 950 MB.
+	-> Starving domain thirdtest: Inflating Memory from 810 MB to 1761 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 950 MB, Total Unsed Memory: 216 MB
+Domain: firsttest, Total Domain Memory: 835 MB, Total Unsed Memory: 173 MB
+Domain: fourthtest, Total Domain Memory: 899 MB, Total Unsed Memory: 180 MB
+Domain: thirdtest, Total Domain Memory: 1424 MB, Total Unsed Memory: 505 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 1424 	 Available Memory: 505
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: thirdtest, Deflating memory from 1424 MB to 1272 MB.
+* Total Memory Freed: 151 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 950 MB, Total Unsed Memory: 194 MB
+Domain: firsttest, Total Domain Memory: 835 MB, Total Unsed Memory: 152 MB
+Domain: fourthtest, Total Domain Memory: 899 MB, Total Unsed Memory: 160 MB
+Domain: thirdtest, Total Domain Memory: 1272 MB, Total Unsed Memory: 596 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 835 	 Available Memory: 152
+Domain: fourthtest 	 Total Memory: 899 	 Available Memory: 160
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 1272 	 Available Memory: 596
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 34 MB
+	-> Domain: thirdtest, Deflating memory from 1272 MB to 1093 MB.
+-Total Memory Freed: 179 MB
+	-> Starving domain firsttest: Inflating Memory from 835 MB to 924 MB.
+	-> Starving domain fourthtest: Inflating Memory from 899 MB to 1823 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 950 MB, Total Unsed Memory: 175 MB
+Domain: firsttest, Total Domain Memory: 924 MB, Total Unsed Memory: 226 MB
+Domain: fourthtest, Total Domain Memory: 1474 MB, Total Unsed Memory: 294 MB
+Domain: thirdtest, Total Domain Memory: 1093 MB, Total Unsed Memory: 401 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 950 	 Available Memory: 175
+Domain: fourthtest 	 Total Memory: 1474 	 Available Memory: 294
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 1093 	 Available Memory: 401
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 14 MB
+	-> Domain: thirdtest, Deflating memory from 1093 MB to 973 MB.
+-Total Memory Freed: 120 MB
+	-> Starving domain secondtest: Inflating Memory from 950 MB to 1010 MB.
+	-> Starving domain fourthtest: Inflating Memory from 1474 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1010 MB, Total Unsed Memory: 220 MB
+Domain: firsttest, Total Domain Memory: 924 MB, Total Unsed Memory: 206 MB
+Domain: fourthtest, Total Domain Memory: 1974 MB, Total Unsed Memory: 878 MB
+Domain: thirdtest, Total Domain Memory: 973 MB, Total Unsed Memory: 268 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 1974 	 Available Memory: 878
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: fourthtest, Deflating memory from 1974 MB to 1710 MB.
+* Total Memory Freed: 263 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1010 MB, Total Unsed Memory: 199 MB
+Domain: firsttest, Total Domain Memory: 924 MB, Total Unsed Memory: 187 MB
+Domain: fourthtest, Total Domain Memory: 1710 MB, Total Unsed Memory: 1132 MB
+Domain: thirdtest, Total Domain Memory: 973 MB, Total Unsed Memory: 247 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 1010 	 Available Memory: 199
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 1710 	 Available Memory: 1132
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 2 MB
+	-> Domain: fourthtest, Deflating memory from 1710 MB to 1371 MB.
+-Total Memory Freed: 339 MB
+	-> Starving domain secondtest: Inflating Memory from 1010 MB to 1350 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1350 MB, Total Unsed Memory: 533 MB
+Domain: firsttest, Total Domain Memory: 924 MB, Total Unsed Memory: 168 MB
+Domain: fourthtest, Total Domain Memory: 1389 MB, Total Unsed Memory: 865 MB
+Domain: thirdtest, Total Domain Memory: 973 MB, Total Unsed Memory: 227 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 924 	 Available Memory: 168
+Memory Surplus Domains:
+Domain: secondtest 	 Total Memory: 1350 	 Available Memory: 533
+Domain: fourthtest 	 Total Memory: 1389 	 Available Memory: 865
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 16 MB
+	-> Domain: secondtest, Deflating memory from 1350 MB to 1190 MB.
+	-> Domain: fourthtest, Deflating memory from 1389 MB to 1130 MB.
+-Total Memory Freed: 419 MB
+	-> Starving domain firsttest: Inflating Memory from 924 MB to 1344 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1190 MB, Total Unsed Memory: 360 MB
+Domain: firsttest, Total Domain Memory: 1344 MB, Total Unsed Memory: 474 MB
+Domain: fourthtest, Total Domain Memory: 1130 MB, Total Unsed Memory: 531 MB
+Domain: thirdtest, Total Domain Memory: 973 MB, Total Unsed Memory: 208 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: firsttest 	 Total Memory: 1344 	 Available Memory: 474
+Domain: fourthtest 	 Total Memory: 1130 	 Available Memory: 531
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: firsttest, Deflating memory from 1344 MB to 1201 MB.
+	-> Domain: fourthtest, Deflating memory from 1130 MB to 970 MB.
+* Total Memory Freed: 302 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1190 MB, Total Unsed Memory: 344 MB
+Domain: firsttest, Total Domain Memory: 1201 MB, Total Unsed Memory: 426 MB
+Domain: fourthtest, Total Domain Memory: 970 MB, Total Unsed Memory: 296 MB
+Domain: thirdtest, Total Domain Memory: 973 MB, Total Unsed Memory: 190 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: thirdtest 	 Total Memory: 973 	 Available Memory: 190
+Memory Surplus Domains:
+Domain: firsttest 	 Total Memory: 1201 	 Available Memory: 426
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 3 MB
+	-> Domain: firsttest, Deflating memory from 1201 MB to 1073 MB.
+-Total Memory Freed: 128 MB
+	-> Starving domain thirdtest: Inflating Memory from 973 MB to 1101 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1190 MB, Total Unsed Memory: 324 MB
+Domain: firsttest, Total Domain Memory: 1073 MB, Total Unsed Memory: 283 MB
+Domain: fourthtest, Total Domain Memory: 970 MB, Total Unsed Memory: 172 MB
+Domain: thirdtest, Total Domain Memory: 1101 MB, Total Unsed Memory: 304 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: fourthtest 	 Total Memory: 970 	 Available Memory: 172
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 21 MB
+	-> Host was able to cough up 175 MB
+-Total Memory Freed: 175 MB
+	-> Starving domain fourthtest: Inflating Memory from 970 MB to 1146 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1190 MB, Total Unsed Memory: 306 MB
+Domain: firsttest, Total Domain Memory: 1073 MB, Total Unsed Memory: 263 MB
+Domain: fourthtest, Total Domain Memory: 1146 MB, Total Unsed Memory: 228 MB
+Domain: thirdtest, Total Domain Memory: 1101 MB, Total Unsed Memory: 287 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: fourthtest 	 Total Memory: 1146 	 Available Memory: 228
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 0 MB
+	-> Host was able to cough up 4 MB
+-Total Memory Freed: 4 MB
+	-> Starving domain fourthtest: Inflating Memory from 1146 MB to 1150 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1190 MB, Total Unsed Memory: 287 MB
+Domain: firsttest, Total Domain Memory: 1073 MB, Total Unsed Memory: 246 MB
+Domain: fourthtest, Total Domain Memory: 1150 MB, Total Unsed Memory: 318 MB
+Domain: thirdtest, Total Domain Memory: 1101 MB, Total Unsed Memory: 267 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1190 MB, Total Unsed Memory: 270 MB
+Domain: firsttest, Total Domain Memory: 1073 MB, Total Unsed Memory: 227 MB
+Domain: fourthtest, Total Domain Memory: 1150 MB, Total Unsed Memory: 297 MB
+Domain: thirdtest, Total Domain Memory: 1101 MB, Total Unsed Memory: 246 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1190 MB, Total Unsed Memory: 247 MB
+Domain: firsttest, Total Domain Memory: 1073 MB, Total Unsed Memory: 206 MB
+Domain: fourthtest, Total Domain Memory: 1150 MB, Total Unsed Memory: 277 MB
+Domain: thirdtest, Total Domain Memory: 1101 MB, Total Unsed Memory: 225 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 1073 	 Available Memory: 206
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 8 MB
+	-> Host was able to cough up 69 MB
+-Total Memory Freed: 69 MB
+	-> Starving domain firsttest: Inflating Memory from 1073 MB to 1143 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1190 MB, Total Unsed Memory: 226 MB
+Domain: firsttest, Total Domain Memory: 1143 MB, Total Unsed Memory: 257 MB
+Domain: fourthtest, Total Domain Memory: 1150 MB, Total Unsed Memory: 256 MB
+Domain: thirdtest, Total Domain Memory: 1101 MB, Total Unsed Memory: 203 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 1190 	 Available Memory: 226
+Domain: thirdtest 	 Total Memory: 1101 	 Available Memory: 203
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 28 MB
+	-> Host was able to cough up 227 MB
+-Total Memory Freed: 227 MB
+	-> Starving domain secondtest: Inflating Memory from 1190 MB to 1304 MB.
+	-> Starving domain thirdtest: Inflating Memory from 1101 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1304 MB, Total Unsed Memory: 322 MB
+Domain: firsttest, Total Domain Memory: 1143 MB, Total Unsed Memory: 235 MB
+Domain: fourthtest, Total Domain Memory: 1150 MB, Total Unsed Memory: 235 MB
+Domain: thirdtest, Total Domain Memory: 1683 MB, Total Unsed Memory: 414 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1304 MB, Total Unsed Memory: 303 MB
+Domain: firsttest, Total Domain Memory: 1143 MB, Total Unsed Memory: 215 MB
+Domain: fourthtest, Total Domain Memory: 1150 MB, Total Unsed Memory: 214 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 944 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 1143 	 Available Memory: 215
+Domain: fourthtest 	 Total Memory: 1150 	 Available Memory: 214
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 2048 	 Available Memory: 944
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 29 MB
+	-> Domain: thirdtest, Deflating memory from 2048 MB to 1764 MB.
+-Total Memory Freed: 283 MB
+	-> Starving domain firsttest: Inflating Memory from 1143 MB to 1285 MB.
+	-> Starving domain fourthtest: Inflating Memory from 1150 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1304 MB, Total Unsed Memory: 281 MB
+Domain: firsttest, Total Domain Memory: 1285 MB, Total Unsed Memory: 339 MB
+Domain: fourthtest, Total Domain Memory: 1840 MB, Total Unsed Memory: 196 MB
+Domain: thirdtest, Total Domain Memory: 1764 MB, Total Unsed Memory: 1003 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: fourthtest 	 Total Memory: 1840 	 Available Memory: 196
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 1764 	 Available Memory: 1003
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 171 MB
+	-> Domain: thirdtest, Deflating memory from 1764 MB to 1463 MB.
+-Total Memory Freed: 300 MB
+	-> Starving domain fourthtest: Inflating Memory from 1840 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1304 MB, Total Unsed Memory: 260 MB
+Domain: firsttest, Total Domain Memory: 1285 MB, Total Unsed Memory: 317 MB
+Domain: fourthtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 1076 MB
+Domain: thirdtest, Total Domain Memory: 1463 MB, Total Unsed Memory: 733 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 1304 	 Available Memory: 260
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 2048 	 Available Memory: 1076
+Domain: thirdtest 	 Total Memory: 1463 	 Available Memory: 733
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 0 MB
+	-> Domain: fourthtest, Deflating memory from 2048 MB to 1725 MB.
+	-> Domain: thirdtest, Deflating memory from 1463 MB to 1243 MB.
+-Total Memory Freed: 542 MB
+	-> Starving domain secondtest: Inflating Memory from 1304 MB to 1846 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1846 MB, Total Unsed Memory: 573 MB
+Domain: firsttest, Total Domain Memory: 1285 MB, Total Unsed Memory: 296 MB
+Domain: fourthtest, Total Domain Memory: 1725 MB, Total Unsed Memory: 745 MB
+Domain: thirdtest, Total Domain Memory: 1243 MB, Total Unsed Memory: 418 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 1725 	 Available Memory: 745
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: fourthtest, Deflating memory from 1725 MB to 1501 MB.
+* Total Memory Freed: 223 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1846 MB, Total Unsed Memory: 779 MB
+Domain: firsttest, Total Domain Memory: 1285 MB, Total Unsed Memory: 273 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 509 MB
+Domain: thirdtest, Total Domain Memory: 1243 MB, Total Unsed Memory: 286 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: secondtest 	 Total Memory: 1846 	 Available Memory: 779
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: secondtest, Deflating memory from 1846 MB to 1613 MB.
+* Total Memory Freed: 233 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 553 MB
+Domain: firsttest, Total Domain Memory: 1285 MB, Total Unsed Memory: 250 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 486 MB
+Domain: thirdtest, Total Domain Memory: 1243 MB, Total Unsed Memory: 263 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 1285 	 Available Memory: 250
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 6 MB
+	-> Host was able to cough up 53 MB
+-Total Memory Freed: 53 MB
+	-> Starving domain firsttest: Inflating Memory from 1285 MB to 1338 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 510 MB
+Domain: firsttest, Total Domain Memory: 1338 MB, Total Unsed Memory: 284 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 463 MB
+Domain: thirdtest, Total Domain Memory: 1243 MB, Total Unsed Memory: 244 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: thirdtest 	 Total Memory: 1243 	 Available Memory: 244
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 4 MB
+	-> Host was able to cough up 32 MB
+-Total Memory Freed: 32 MB
+	-> Starving domain thirdtest: Inflating Memory from 1243 MB to 1276 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 487 MB
+Domain: firsttest, Total Domain Memory: 1338 MB, Total Unsed Memory: 263 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 443 MB
+Domain: thirdtest, Total Domain Memory: 1276 MB, Total Unsed Memory: 235 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 1338 	 Available Memory: 263
+Domain: thirdtest 	 Total Memory: 1276 	 Available Memory: 235
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 24 MB
+	-> Host was able to cough up 193 MB
+-Total Memory Freed: 193 MB
+	-> Starving domain firsttest: Inflating Memory from 1338 MB to 1435 MB.
+	-> Starving domain thirdtest: Inflating Memory from 1276 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 466 MB
+Domain: firsttest, Total Domain Memory: 1435 MB, Total Unsed Memory: 342 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 421 MB
+Domain: thirdtest, Total Domain Memory: 1843 MB, Total Unsed Memory: 371 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 444 MB
+Domain: firsttest, Total Domain Memory: 1435 MB, Total Unsed Memory: 320 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 399 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 1007 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 2048 	 Available Memory: 1007
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: thirdtest, Deflating memory from 2048 MB to 1745 MB.
+* Total Memory Freed: 302 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 421 MB
+Domain: firsttest, Total Domain Memory: 1435 MB, Total Unsed Memory: 297 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 375 MB
+Domain: thirdtest, Total Domain Memory: 1745 MB, Total Unsed Memory: 819 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 1745 	 Available Memory: 819
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: thirdtest, Deflating memory from 1745 MB to 1499 MB.
+* Total Memory Freed: 245 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 399 MB
+Domain: firsttest, Total Domain Memory: 1435 MB, Total Unsed Memory: 273 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 351 MB
+Domain: thirdtest, Total Domain Memory: 1499 MB, Total Unsed Memory: 503 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 1435 	 Available Memory: 273
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 13 MB
+	-> Host was able to cough up 110 MB
+-Total Memory Freed: 110 MB
+	-> Starving domain firsttest: Inflating Memory from 1435 MB to 1546 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 378 MB
+Domain: firsttest, Total Domain Memory: 1546 MB, Total Unsed Memory: 351 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 329 MB
+Domain: thirdtest, Total Domain Memory: 1499 MB, Total Unsed Memory: 415 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 358 MB
+Domain: firsttest, Total Domain Memory: 1546 MB, Total Unsed Memory: 347 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 309 MB
+Domain: thirdtest, Total Domain Memory: 1499 MB, Total Unsed Memory: 392 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 347 MB
+Domain: firsttest, Total Domain Memory: 1546 MB, Total Unsed Memory: 328 MB
+Domain: fourthtest, Total Domain Memory: 1501 MB, Total Unsed Memory: 288 MB
+Domain: thirdtest, Total Domain Memory: 1499 MB, Total Unsed Memory: 372 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: fourthtest 	 Total Memory: 1501 	 Available Memory: 288
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 11 MB
+	-> Host was able to cough up 95 MB
+-Total Memory Freed: 95 MB
+	-> Starving domain fourthtest: Inflating Memory from 1501 MB to 1596 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 324 MB
+Domain: firsttest, Total Domain Memory: 1546 MB, Total Unsed Memory: 305 MB
+Domain: fourthtest, Total Domain Memory: 1596 MB, Total Unsed Memory: 362 MB
+Domain: thirdtest, Total Domain Memory: 1499 MB, Total Unsed Memory: 350 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 1546 	 Available Memory: 305
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 3 MB
+	-> Host can't spare any memory, host is sorry!!
+-Total Memory Freed: 0 MB
+	-> Starving domain firsttest: Inflating Memory from 1546 MB to 1546 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 305 MB
+Domain: firsttest, Total Domain Memory: 1546 MB, Total Unsed Memory: 281 MB
+Domain: fourthtest, Total Domain Memory: 1596 MB, Total Unsed Memory: 339 MB
+Domain: thirdtest, Total Domain Memory: 1499 MB, Total Unsed Memory: 327 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 1613 	 Available Memory: 305
+Domain: firsttest 	 Total Memory: 1546 	 Available Memory: 281
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 45 MB
+	-> Host can't spare any memory, host is sorry!!
+-Total Memory Freed: 0 MB
+	-> Starving domain secondtest: Inflating Memory from 1613 MB to 1613 MB.
+	-> Starving domain firsttest: Inflating Memory from 1546 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 283 MB
+Domain: firsttest, Total Domain Memory: 1851 MB, Total Unsed Memory: 297 MB
+Domain: fourthtest, Total Domain Memory: 1596 MB, Total Unsed Memory: 317 MB
+Domain: thirdtest, Total Domain Memory: 1499 MB, Total Unsed Memory: 305 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 1613 	 Available Memory: 283
+Domain: firsttest 	 Total Memory: 1851 	 Available Memory: 297
+Domain: fourthtest 	 Total Memory: 1596 	 Available Memory: 317
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 113 MB
+	-> Host can't spare any memory, host is sorry!!
+-Total Memory Freed: 0 MB
+	-> Starving domain secondtest: Inflating Memory from 1613 MB to 1613 MB.
+	-> Starving domain firsttest: Inflating Memory from 1851 MB to 2048 MB.
+	-> Starving domain fourthtest: Inflating Memory from 1596 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1613 MB, Total Unsed Memory: 263 MB
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 679 MB
+Domain: fourthtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 760 MB
+Domain: thirdtest, Total Domain Memory: 1499 MB, Total Unsed Memory: 286 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 1613 	 Available Memory: 263
+Domain: thirdtest 	 Total Memory: 1499 	 Available Memory: 286
+Memory Surplus Domains:
+Domain: fourthtest 	 Total Memory: 2048 	 Available Memory: 760
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 72 MB
+	-> Domain: fourthtest, Deflating memory from 2048 MB to 1819 MB.
+-Total Memory Freed: 228 MB
+	-> Starving domain secondtest: Inflating Memory from 1613 MB to 1727 MB.
+	-> Starving domain thirdtest: Inflating Memory from 1499 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1727 MB, Total Unsed Memory: 360 MB
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 748 MB
+Domain: fourthtest, Total Domain Memory: 1819 MB, Total Unsed Memory: 519 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 462 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: firsttest 	 Total Memory: 2048 	 Available Memory: 748
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: firsttest, Deflating memory from 2048 MB to 1823 MB.
+* Total Memory Freed: 224 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 1727 MB, Total Unsed Memory: 339 MB
+Domain: firsttest, Total Domain Memory: 1823 MB, Total Unsed Memory: 666 MB
+Domain: fourthtest, Total Domain Memory: 1819 MB, Total Unsed Memory: 496 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 805 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: secondtest 	 Total Memory: 1727 	 Available Memory: 339
+Memory Surplus Domains:
+Domain: firsttest 	 Total Memory: 1823 	 Available Memory: 666
+Domain: thirdtest 	 Total Memory: 2048 	 Available Memory: 805
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 6 MB
+	-> Domain: firsttest, Deflating memory from 1823 MB to 1623 MB.
+	-> Domain: thirdtest, Deflating memory from 2048 MB to 1806 MB.
+-Total Memory Freed: 441 MB
+	-> Starving domain secondtest: Inflating Memory from 1727 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 511 MB
+Domain: firsttest, Total Domain Memory: 1635 MB, Total Unsed Memory: 469 MB
+Domain: fourthtest, Total Domain Memory: 1819 MB, Total Unsed Memory: 474 MB
+Domain: thirdtest, Total Domain Memory: 1806 MB, Total Unsed Memory: 715 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+Domain: thirdtest 	 Total Memory: 1806 	 Available Memory: 715
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* No Starving Domains, only Memory Surplus Domains. Giving memory back to Hypervisor
+	-> Domain: thirdtest, Deflating memory from 1806 MB to 1591 MB.
+* Total Memory Freed: 214 MB
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 4 active domains
+Domain: secondtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 634 MB
+Domain: firsttest, Total Domain Memory: 1623 MB, Total Unsed Memory: 296 MB
+Domain: fourthtest, Total Domain Memory: 1819 MB, Total Unsed Memory: 456 MB
+Domain: thirdtest, Total Domain Memory: 1591 MB, Total Unsed Memory: 448 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 1623 	 Available Memory: 296
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 28 MB
+	-> Host can't spare any memory, host is sorry!!
+-Total Memory Freed: 0 MB
+	-> Starving domain firsttest: Inflating Memory from 1623 MB to 1623 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 1623 MB, Total Unsed Memory: 249 MB
+Domain: fourthtest, Total Domain Memory: 1819 MB, Total Unsed Memory: 417 MB
+Domain: thirdtest, Total Domain Memory: 1591 MB, Total Unsed Memory: 266 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 1623 	 Available Memory: 249
+Domain: thirdtest 	 Total Memory: 1591 	 Available Memory: 266
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 126 MB
+	-> Host was able to cough up 1013 MB
+-Total Memory Freed: 1013 MB
+	-> Starving domain firsttest: Inflating Memory from 1623 MB to 2048 MB.
+	-> Starving domain thirdtest: Inflating Memory from 1591 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 660 MB
+Domain: fourthtest, Total Domain Memory: 1819 MB, Total Unsed Memory: 394 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 709 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 636 MB
+Domain: fourthtest, Total Domain Memory: 1819 MB, Total Unsed Memory: 370 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 685 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 611 MB
+Domain: fourthtest, Total Domain Memory: 1819 MB, Total Unsed Memory: 346 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 661 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: fourthtest 	 Total Memory: 1819 	 Available Memory: 346
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 17 MB
+	-> Host was able to cough up 137 MB
+-Total Memory Freed: 137 MB
+	-> Starving domain fourthtest: Inflating Memory from 1819 MB to 1957 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 585 MB
+Domain: fourthtest, Total Domain Memory: 1957 MB, Total Unsed Memory: 463 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 636 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 559 MB
+Domain: fourthtest, Total Domain Memory: 1957 MB, Total Unsed Memory: 437 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 612 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 532 MB
+Domain: fourthtest, Total Domain Memory: 1957 MB, Total Unsed Memory: 413 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 587 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 506 MB
+Domain: fourthtest, Total Domain Memory: 1957 MB, Total Unsed Memory: 388 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 564 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: fourthtest 	 Total Memory: 1957 	 Available Memory: 388
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 3 MB
+	-> Host was able to cough up 25 MB
+-Total Memory Freed: 25 MB
+	-> Starving domain fourthtest: Inflating Memory from 1957 MB to 1982 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 481 MB
+Domain: fourthtest, Total Domain Memory: 1982 MB, Total Unsed Memory: 389 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 540 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: fourthtest 	 Total Memory: 1982 	 Available Memory: 389
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 7 MB
+	-> Host was able to cough up 58 MB
+-Total Memory Freed: 58 MB
+	-> Starving domain fourthtest: Inflating Memory from 1982 MB to 2041 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 454 MB
+Domain: fourthtest, Total Domain Memory: 2041 MB, Total Unsed Memory: 423 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 514 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 426 MB
+Domain: fourthtest, Total Domain Memory: 2041 MB, Total Unsed Memory: 400 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 488 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: fourthtest 	 Total Memory: 2041 	 Available Memory: 400
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 8 MB
+	-> Host was able to cough up 64 MB
+-Total Memory Freed: 64 MB
+	-> Starving domain fourthtest: Inflating Memory from 2041 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 400 MB
+Domain: fourthtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 382 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 465 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 2048 	 Available Memory: 400
+Domain: fourthtest 	 Total Memory: 2048 	 Available Memory: 382
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 36 MB
+	-> Host was able to cough up 293 MB
+-Total Memory Freed: 293 MB
+	-> Starving domain firsttest: Inflating Memory from 2048 MB to 2048 MB.
+	-> Starving domain fourthtest: Inflating Memory from 2048 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 370 MB
+Domain: fourthtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 358 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 441 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 2048 	 Available Memory: 370
+Domain: fourthtest 	 Total Memory: 2048 	 Available Memory: 358
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 90 MB
+	-> Host was able to cough up 479 MB
+-Total Memory Freed: 479 MB
+	-> Starving domain firsttest: Inflating Memory from 2048 MB to 2048 MB.
+	-> Starving domain fourthtest: Inflating Memory from 2048 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 342 MB
+Domain: fourthtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 333 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 417 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 2048 	 Available Memory: 342
+Domain: fourthtest 	 Total Memory: 2048 	 Available Memory: 333
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 142 MB
+	-> Host was able to cough up 423 MB
+-Total Memory Freed: 423 MB
+	-> Starving domain firsttest: Inflating Memory from 2048 MB to 2048 MB.
+	-> Starving domain fourthtest: Inflating Memory from 2048 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 315 MB
+Domain: fourthtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 310 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 395 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 2048 	 Available Memory: 315
+Domain: fourthtest 	 Total Memory: 2048 	 Available Memory: 310
+Domain: thirdtest 	 Total Memory: 2048 	 Available Memory: 395
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 206 MB
+	-> Host can't spare any memory, host is sorry!!
+-Total Memory Freed: 0 MB
+	-> Starving domain firsttest: Inflating Memory from 2048 MB to 2048 MB.
+	-> Starving domain fourthtest: Inflating Memory from 2048 MB to 2048 MB.
+	-> Starving domain thirdtest: Inflating Memory from 2048 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 287 MB
+Domain: fourthtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 287 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 372 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 2048 	 Available Memory: 287
+Domain: fourthtest 	 Total Memory: 2048 	 Available Memory: 287
+Domain: thirdtest 	 Total Memory: 2048 	 Available Memory: 372
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 280 MB
+	-> Host can't spare any memory, host is sorry!!
+-Total Memory Freed: 0 MB
+	-> Starving domain firsttest: Inflating Memory from 2048 MB to 2048 MB.
+	-> Starving domain fourthtest: Inflating Memory from 2048 MB to 2048 MB.
+	-> Starving domain thirdtest: Inflating Memory from 2048 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 258 MB
+Domain: fourthtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 263 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 347 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest 	 Total Memory: 2048 	 Available Memory: 258
+Domain: fourthtest 	 Total Memory: 2048 	 Available Memory: 263
+Domain: thirdtest 	 Total Memory: 2048 	 Available Memory: 347
+Memory Surplus Domains:
+-----------------------------------------------------------------------------------------------------------
+
+----------------------------------------  Transactions ------------------------------------------------------------
+* Starving domains exist, memory needed for them is 359 MB
+	-> Host can't spare any memory, host is sorry!!
+-Total Memory Freed: 0 MB
+	-> Starving domain firsttest: Inflating Memory from 2048 MB to 2048 MB.
+	-> Starving domain fourthtest: Inflating Memory from 2048 MB to 2048 MB.
+	-> Starving domain thirdtest: Inflating Memory from 2048 MB to 2048 MB.
+---------------------------------------------------------------------------------------------------------------------
+Iteration done...
+
+we have 3 active domains
+Domain: firsttest, Total Domain Memory: 2048 MB, Total Unsed Memory: 229 MB
+Domain: fourthtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 237 MB
+Domain: thirdtest, Total Domain Memory: 2048 MB, Total Unsed Memory: 323 MB
+
+------------------------- Domain Memory Details---------------------------------------------------------
+Memory Deficit Domains:
+Domain: firsttest

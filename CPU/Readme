@@ -1,0 +1,12 @@
+To compile:
+1. open terminal
+2. run command "make"
+
+To run:
+1. create and start virtual machines.
+2. run jobs on virtual machines. (For example, the 5 testcases)
+3. open terminal
+4. run command "./vcpu_scheduler <period(s)>"
+5. see the console output. 
+
+By Peijun Wu (pwu80)

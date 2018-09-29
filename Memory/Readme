@@ -1,0 +1,16 @@
+To compile:
+1. open terminal
+2. run command "make"
+
+To run:
+1. create and start virtual machines.
+2. run jobs on virtual machines. (For example, the 3 testcases)
+3. open terminal
+4. run command "./Memory_coordinator <period(s)>"
+5. see the console output. 
+
+Note: 
+1. The logs for testcase 2 and testcase 3 were made with maxmemory of vms being set to 800MB. The reason is that my computer has a limited amount of memory reserved for vm. Thus all vms taking more than 900MB may result in one vm crashing.
+2. For best result, please restart all vms before going to the next testcase.
+
+By Peijun Wu (pwu80)

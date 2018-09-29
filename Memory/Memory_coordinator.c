@@ -30,11 +30,10 @@ unsigned long long int convert(unsigned long long int val){
     return val/1024;
 }
 
-#define deficitMultiplier 0.25
-#define surplusMultiplier 0.4
-#define surplusPenalty 0.2
-#define domMemThreshold 350 * 1024 
-#define hostMemThreshold 400 * 1024
+#define deficitMultiplier 0.2
+#define surplusMultiplier 0.35
+#define domMemThreshold 200 * 1024 
+#define hostMemThreshold 200 * 1024
 
 int getDomains(virConnectPtr conn, struct DomainList *domainList) {
     virDomainPtr *domainArr;
@@ -55,7 +54,7 @@ int getDomains(virConnectPtr conn, struct DomainList *domainList) {
 unsigned long long int freeSurplusMem(DomainMemObj *memorySurplusDomain, int memSurplusDoms){
     unsigned long long int freedMem = 0;
     for(int j=0; j<memSurplusDoms; j++){
-        unsigned long long int newAlloc = memorySurplusDomain[j].totalMemory - (surplusPenalty * memorySurplusDomain[j].availableMemory);
+        unsigned long long int newAlloc = memorySurplusDomain[j].totalMemory - (0.3 * memorySurplusDomain[j].availableMemory);
         newAlloc = (newAlloc < domMemThreshold ? domMemThreshold : newAlloc);
         freedMem += (memorySurplusDomain[j].totalMemory  - newAlloc);
         // virDomainSetMemory(memorySurplusDomain[j].domain, newAlloc);

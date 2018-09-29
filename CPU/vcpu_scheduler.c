@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <float.h>
 
-static const double DIFF_THRESHOLD = 15.0;
+static const double DIFF_THRESHOLD = 20.0;
 
 typedef struct DomainStats {
     virDomainPtr domain;
@@ -295,6 +295,6 @@ int main(int argc, char **argv) {
     } 
 
     virConnectClose(conn);
-    printf("No active doms. Program exiting..\n");
+    printf("Done!!!\n");
     return 0;
 }

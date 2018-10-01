@@ -1,1 +1,14 @@
-bowbow
+Instructions on how to run:
+1.) To Compile - make in the current directory
+2.) To Run - ./vcpu_scheduler <time_interval>
+
+To clean the build
+1.) make clean
+
+
+About the Algorithm used to load balance VCPU
+1.) Find the utilization of every PCPU - Determined by the sum of utilizations of individual VCPUs running on the PCPU
+2.) Based on the utilization, find the Least Utilized & the most Utilized PCPUs
+3.) If the difference in utilization between the Busiest & Lightest PCPUs is less than a pre-defined utilization threshold, there's no need to load balance. Although, the scheduler would pin the VCPU to the PCPU it has affinity for, considering it has an affinity in the first place. 
+4.) If the difference is greater than the threshold, the scheduler would pick out the least Processor Intensive VCPU from the Busiest PCPU and pin it to the lighest VCPU.
+

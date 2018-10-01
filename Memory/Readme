@@ -1,1 +1,21 @@
-bowbow
+Instructions on how to run:
+1.) To Compile - make in the current directory
+2.) To Run - ./Memory_coordinator  <time_interval(secs)>
+
+To clean the build
+1.) make clean
+
+
+About the Algorithm used to load balance VCPU
+1.) Get the Total Space(TS) & Unsed Space(US) for every domain.
+2.) Categorize domains into Memory Deficit & Memory Surplus Domains based on the following criteria:
+	i.) If Unused Space < 0.2 * Total Space, then Domain is Starving (Memory Deficit Domain)
+	ii.) If Unused Space > 0.35 * Total Space, then Domain is Wasteful (Memory Surplus Domain)
+3.) If there no Starving Domains, but only Wasteful Domains take some of its unused space (Penalty = 0.35 * Unused Space) and give it back to the host
+4.) If there are Starving Domains,
+	i.) Calculate the amount of memory required for every starving domain to cross the threshold mentioned in 2.i above
+ 	ii.) Sum up the each of those amounts to get the Total amount of memory needed.
+	iii.) Apply the same penalty mentioned in point 3 above on the Wasteful domains to free up some memory from each of the Wasteful domains.
+	iv.) If the freed up memory is not sufficient to meet the demands of the Starving domains, check if the host can spare some. 
+	v.) Adding up (iii) & (iv) gives us total memory freed. Allocate it equally across all starving domains.
+ 
